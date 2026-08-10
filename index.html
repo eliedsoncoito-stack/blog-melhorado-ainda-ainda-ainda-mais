@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meu blog tech</title>
+<style>
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+:root {
+  --cor-primaria: #183C63;
+  --cor-secundaria: #3a638e;
+  --cor-fundo: #ffffff;
+  --cor-texto: #151428;
+  --cor-contraste: #f3eef7;
+  --cor-botao: #f9f9f9;
+}
+
+body {
+  max-width: 100vw;
+  margin: 0;
+  background-color: #EEF1F5;
+}
+
+header {
+  background-color: var(--cor-primaria);
+  color: var(--cor-contraste);
+  text-align: center;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+main {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+article {
+  display: flex;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+
+  margin: 16px;
+  gap: 16px;
+  padding: 16px;
+
+  flex: 1 1 25%;
+
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+article:hover {
+  transform: scale(1.02);
+}
+
+img {
+  width: 80px;
+  height: 80px;
+}
+
+.autor {
+  font-style: italic;
+}
+
+.artigo-fonte a {
+  color: var(--cor-primaria);
+}
+
+.reacoes {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.reacoes button {
+  border: 1px solid var(--cor-primaria);
+  background-color: var(--cor-botao);
+  color: var(--cor-primaria);
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.reacoes button.ativo.btn-curtir {
+  background-color: var(--cor-primaria);
+  color: #FFFFFF;
+}
+
+.reacoes button.ativo.btn-like {
+  background-color: var(--cor-primaria);
+  color: #FFFFFF;
+}
+
+.btn-tema-escuro,
+.btn-voltar-topo {
+  position: fixed;
+  bottom: 16px;
+  font-size: 32px;
+  padding: 12px;
+  background-color: var(--cor-primaria);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-tema-escuro {
+  right: 16px;
+}
+
+.btn-voltar-topo {
+  right: 88px;
+}
+
+.tema-escuro {
+  --cor-primaria: #c9e3ff;
+  --cor-fundo: #151428;
+  --cor-texto: #ffffff;
+  --cor-contraste: #183C63;
+  --cor-botao: #f9f9f9;
+}
+
+.tema-escuro a {
+  color: var(--cor-secundaria);
+}
+
+.tema-escuro header p {
+  color: var(--cor-contraste);
+}
+
+.tema-escuro .btn-tema-escuro {
+  background-color: var(--cor-secundaria);
+}
+
+@media (max-width: 700px) {
+  article {
+    flex: 1 1 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Meu blog tech</h1>
+  <p>Vou compartilhar conhecimentos sobre tecnologia e programação.</p>
+</header>
+
+<main>
+
+  <article>
+    <img src="https://cdn-icons-png.flaticon.com/128/2721/2721620.png" alt="icone">
+    <h2>Meu primeiro post</h2>
+    <p class="autor">Por: eliedsonhzk</p>
+    <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
+    <div class="reacoes">
+      <button class="btn-curtir" data-tipo="curtir">❤️ <span class="contador">6</span></button>
+      <button class="btn-like" data-tipo="like">👍🏻 <span class="contador">4</span></button>
+    </div>
+  </article>
+
+  <article>
+    <img src="https://cdn-icons-png.flaticon.com/128/2721/2721296.png" alt="icone">
+    <h2>A quantidade de dados no mundo é surreal</h2>
+    <p class="autor">Por: eliedsonhzk</p>
+    <p>Estima-se que 90% de todos os dados existentes no mundo hoje foram gerados apenas nos últimos dois anos. Vivemos em uma verdadeira explosão de informação que não para de acelerar.</p>
+    <p class="artigo-fonte">Fonte: <a href="https://www.tecmundo.com.br" target="_blank" rel="noopener">TecMundo</a></p>
+    <div class="reacoes">
+      <button class="btn-curtir" data-tipo="curtir">❤️ <span class="contador">12</span></button>
+      <button class="btn-like" data-tipo="like">👍🏻 <span class="contador">8</span></button>
+    </div>
+  </article>
+
+  <article>
+    <img src="https://cdn-icons-png.flaticon.com/128/3067/3067257.png" alt="icone">
+    <h2>O primeiro mouse não era de plástico</h2>
+    <p class="autor">Por: eliedsonhzk</p>
+    <p>Antes do design ergonômico e das luzes RGB, o primeiro mouse do mundo foi construído em madeira! Criado por Douglas Engelbart em 1964, ele tinha o formato de uma caixa quadrada e apenas um botão.</p>
+    <p class="artigo-fonte">Fonte: <a href="https://www.tecmundo.com.br" target="_blank" rel="noopener">TecMundo</a></p>
+    <div class="reacoes">
+      <button class="btn-curtir" data-tipo="curtir">❤️ <span class="contador">9</span></button>
+      <button class="btn-like" data-tipo="like">👍🏻 <span class="contador">5</span></button>
+    </div>
+  </article>
+
+  <article>
+    <img src="https://cdn-icons-png.flaticon.com/128/1055/1055666.png" alt="icone">
+    <h2>Por que o teclado é chamado de QWERTY?</h2>
+    <p class="autor">Por: eliedsonhzk</p>
+    <p>O layout QWERTY foi criado em 1873 para máquinas de escrever, justamente para evitar que as hastes metálicas travassem ao digitar rápido. Curiosamente, seguimos usando esse padrão até hoje.</p>
+    <div class="reacoes">
+      <button class="btn-curtir" data-tipo="curtir">❤️ <span class="contador">15</span></button>
+      <button class="btn-like" data-tipo="like">👍🏻 <span class="contador">10</span></button>
+    </div>
+  </article>
+
+  <article>
+    <img src="https://cdn-icons-png.flaticon.com/128/3049/3049217.png" alt="icone">
+    <h2>O "bug" que era um bicho de verdade</h2>
+    <p class="autor">Por: eliedsonhzk</p>
+    <p>O termo "bug" (inseto) para erros de software ficou famoso em 1947, quando engenheiros encontraram uma mariposa real presa dentro do computador Harvard Mark II, causando uma falha no sistema.</p>
+    <p class="artigo-fonte">Fonte: <a href="https://www.educamaisbrasil.com.br" target="_blank" rel="noopener">Educa Mais Brasil</a></p>
+    <div class="reacoes">
+      <button class="btn-curtir" data-tipo="curtir">❤️ <span class="contador">7</span></button>
+      <button class="btn-like" data-tipo="like">👍🏻 <span class="contador">3</span></button>
+    </div>
+  </article>
+
+  <article>
+    <img src="https://cdn-icons-png.flaticon.com/128/2620/2620993.png" alt="icone">
+    <h2>O primeiro computador não foi a máquina de Turing?</h2>
+    <p class="autor">Por: eliedsonhzk</p>
+    <p>Apesar de Alan Turing ser conhecido como pai da computação, ele não criou o primeiro computador. Entre os primeiros, um deles foi o Colossus, projetado por Tommy Flowers na Segunda Guerra, e também o ENIAC, projetado por J. Presper Eckert e John Mauchly.</p>
+    <p class="artigo-fonte">Fonte: <a href="https://www.thenationalmuseumofcomputing.org.uk" target="_blank" rel="noopener">The National Museum of Computing</a></p>
+    <div class="reacoes">
+      <button class="btn-curtir" data-tipo="curtir">❤️ <span class="contador">11</span></button>
+      <button class="btn-like" data-tipo="like">👍🏻 <span class="contador">6</span></button>
+    </div>
+  </article>
+
+  <button class="btn-tema-escuro">🌙</button>
+  <button class="btn-voltar-topo">⬆️</button>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+  </html>
